@@ -53,6 +53,7 @@ export async function middleware(request: NextRequest) {
   let oauthData;
   try {
     oauthData = JSON.parse(oauthCookie);
+    console.log(oauthData);
   } catch (error) {
     console.error("Failed to parse oauth_data cookie:", error);
     return NextResponse.redirect(new URL("/auth/login", request.url));
