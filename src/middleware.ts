@@ -39,7 +39,7 @@ export async function middleware(request: NextRequest) {
   }
 
   try {
-    await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/user`, {
+    await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/user/show`, {
       headers: { Authorization: `Bearer ${access_token}` },
     });
     console.log("Token valid, proceeding to dashboard");
